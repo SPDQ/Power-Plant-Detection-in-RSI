@@ -1,0 +1,19 @@
+item {
+  id: 1
+  name: 'unworking_chimney'
+}
+
+item {
+  id: 2
+  name: 'working_chimney'
+}
+
+item {
+  id: 3
+  name: 'unworking_condensing_tower'
+}
+
+item {
+  id: 4
+  name: 'working_condensing_tower'
+}
