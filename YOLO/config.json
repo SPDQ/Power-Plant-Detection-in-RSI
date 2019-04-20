@@ -1,0 +1,40 @@
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [31,27, 35,42, 47,70, 62,41, 72,120, 76,69, 110,89, 111,49, 137,128],
+        "labels": [ "unworking_chimney", "working_chimney", "unworking_condensing_tower", "working_condensing_tower" ]
+    },
+
+    "train": {
+        "train_image_folder": "/home/keras-yolo3-master/VOC_train/JPEGImages/",
+        "train_annot_folder": "/home/keras-yolo3-master/VOC_train/Annotations/",
+        "cache_name":           "chimney_train.pkl",
+
+        "train_times": 8,
+        "batch_size": 8,
+        "learning_rate": 1e-4,
+        "nb_epochs": 80,
+        "warmup_epochs": 3,
+        "ignore_thresh": 0.5,
+        "gpus": "0",
+
+        "grid_scales": [ 1, 2, 3 ],
+        "obj_scale": 5,
+        "noobj_scale": 1,
+        "xywh_scale": 1,
+        "class_scale": 4,
+
+        "tensorboard_dir": "./checkpoint/",
+        "saved_weights_name": "best_model.h5",
+        "debug": true
+    },
+
+    "valid": {
+        "valid_image_folder": "/home/keras-yolo3-master/VOC_eval/JPEGImages/",
+        "valid_annot_folder": "/home/keras-yolo3-master/VOC_eval/Annotations/",
+        "cache_name":           "chimney_val.pkl",
+
+        "valid_times": 1
+    }
+}
