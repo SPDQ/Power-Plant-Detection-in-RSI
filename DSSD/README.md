@@ -1,15 +1,6 @@
 # DSSD : Deconvolutional Single Shot Detector
 
-[![License](https://img.shields.io/badge/license-BSD-blue.svg)](LICENSE)
-
-By [Cheng-Yang Fu*](http://www.cs.unc.edu/~cyfu/), [Wei Liu*](http://www.cs.unc.edu/~wliu/), Ananth Ranga, Ambrish Tyagi, [Alexander C. Berg](http://acberg.com).
-
 *=Equal Contribution
-
-### Status now 
-The first version is done. Users can start training the SSD/DSSD with Resnet-101 now. 
-
-Stay tuned. Models, trained for Pascal VOC 2007, 2012 and COCO , will be released soon. 
 
 ### Introduction
 
@@ -17,22 +8,6 @@ Deconvolutional SSD brings additional context into state-of-the-art general obje
 
 The code is based on [SSD](https://github.com/weiliu89/caffe/tree/ssd). For more details, please refer to our [arXiv paper](https://arxiv.org/abs/1701.06659). 
 
-### Citing DSSD
-
-Please cite DSSD in your publications if it helps your research:
-
-    @inproceedings{Fu2016dssd,
-      title = {{DSSD}: Deconvolutional Single Shot Detector},
-      author = {Fu, Cheng-Yang and Liu, Wei and Ranga, Ananth and Tyagi, Ambrish and Berg, Alexander C.},
-      booktitle = {arXiv preprint arXiv:1701.06659},
-    }
-
-
-### Contents
-1. [Installation](#installation)
-2. [Preparation](#preparation)
-3. [Train/Eval](#traineval)
-4. [COCO_Models](#cocomodels)
 
 ### Installation
 1. Download the code from github. We call this directory as `$CAFFE_ROOT` later.
@@ -122,28 +97,6 @@ Please cite DSSD in your publications if it helps your research:
 	# Finetuning the entire network only works for the model with 513x513 inputs not 321x321. 
 	```
   
-### COCO_Models
-1. We add two scripts for training SSD/DSSD with 513x513 inputs on COCO. 
-  	
-	```Shell
-	# Train SSD513-ResNet101 on COCO 
-	python examples/ssd/ssd_coco_resnet_513.py
-	# Train DSSD513-ResNet101 on COCO and use SSD513 as the pretrained model
-	python examples/ssd/ssd_coco_resnet_deconv_513.py
-	```
-2. We strongly suggest to use the trained models instead of training from scracth. 
-		
-	[SSD_513_COCO](https://drive.google.com/file/d/0By9LEMeCDdboa0IxSkIxbEVWZVk/view?usp=sharing)
-	
-	[DSSD_513_COCO](https://drive.google.com/file/d/0By9LEMeCDdboSDRlVHY2SFNJVzQ/view?usp=sharing) 
-	```Shell
-	# move the compressed files at $CAFFE_ROOT/models/ResNet-101
-	cd $CAFFE_ROOT/models/ResNet-101
-	tar -vzxf SSD_513_COCO.tar.gz
-	tar -vzxf DSSD_513_COCO.tar.gz
-	```
-	P.S.: Please change the field "start" to offset" in PriorBox Layers.
-  
-3. In our experiments, the model with 513x513 inputs are trained using NVIDIA P40 which consists of 22GB memory. Because we add extra batch normalization layers, it's important to make the mini-batchs size at least 5 in each gpu. So, if you use the gpu with smaller memory, I don't think you can replicate the results. 
+
      		
 	
