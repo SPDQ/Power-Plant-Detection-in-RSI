@@ -10,5 +10,5 @@ Dataset
 ---
 Our dataset which is collected from Google Earth covers 60 fossil fuel power plants in the Beijing-Tianjin-Hebei Region. We divide the 
 dataset into four classes i.e. working chimney, unworking chimney, working condensing tower and unworking condensing tower. The format of 
-annotations and label are pascal VOC2007. You can download the dataset at https://pan.baidu.com/s/1eV7-9F1ZbrudsRRp15lDAg and the 
-password is pyq0. 
+annotations and label are pascal VOC2007. You can download the dataset at https://pan.baidu.com/s/1cpiydWlBXvUTejm6L8Eo0w and the 
+password is 8wm9. 
