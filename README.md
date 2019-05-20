@@ -16,3 +16,17 @@ password is 14oy.
 Citation
 ---
 If you find this dataset or code useful you can cite us using the following bibTex:
+```
+@Article{rs11091117,
+AUTHOR = {Zhang, Haopeng and Deng, Qin},
+TITLE = {Deep Learning Based Fossil-Fuel Power Plant Monitoring in High Resolution Remote Sensing Images: A Comparative Study},
+JOURNAL = {Remote Sensing},
+VOLUME = {11},
+YEAR = {2019},
+NUMBER = {9},
+ARTICLE-NUMBER = {1117},
+URL = {http://www.mdpi.com/2072-4292/11/9/1117},
+ISSN = {2072-4292},
+DOI = {10.3390/rs11091117}
+}
+```
