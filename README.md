@@ -12,3 +12,7 @@ Our dataset which is collected from Google Earth covers 60 fossil fuel power pla
 dataset into four classes i.e. working chimney, unworking chimney, working condensing tower and unworking condensing tower. The format of 
 annotations and label are pascal VOC2007. You can download the dataset at https://pan.baidu.com/s/1pTt3HH54DerVVYwJDtyQtQ and the 
 password is 14oy. 
+
+Citation
+---
+If you find this dataset or code useful you can cite us using the following bibTex:
